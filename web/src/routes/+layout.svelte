@@ -1,13 +1,12 @@
 <script lang="ts">
     import { afterNavigate, beforeNavigate, onNavigate } from "$app/navigation";
     import favicon from "$lib/assets/favicon.svg";
+    import Navbar from "$lib/components/Navbar.svelte";
     import "../css/output.css";
-
     beforeNavigate(() => {
         document.documentElement.style.cursor = "progress";
         document.body.style.cursor = "progress";
     });
-
     onNavigate((navigation) => {
         if (!document.startViewTransition) return;
         return new Promise((resolve) => {
@@ -17,48 +16,45 @@
             });
         });
     });
-
     afterNavigate(() => {
         document.documentElement.style.cursor = "";
         document.body.style.cursor = "";
     });
 
-    let { children } = $props();
+    let { children, data } = $props();
 </script>
 
 <svelte:head>
     <link rel="icon" href={favicon} />
 </svelte:head>
-
-{@render children?.()}
+<nav style="view-transition-name: navbar;">
+    <Navbar user={data.user} />
+</nav>
+<main>
+    {@render children?.()}
+</main>
 
 <style>
     @view-transition {
         navigation: auto;
     }
 
-    /* Basic crossfade */
-    ::view-transition-old(root),
-    ::view-transition-new(root) {
-        animation-duration: 0.3s;
-    }
 
     ::view-transition-old(root) {
-        animation-name: fade-out;
+        animation: blur-out 0.3s ease-out;
     }
-
     ::view-transition-new(root) {
-        animation-name: fade-in;
+        animation: blur-in 0.3s ease-out;
     }
-
-    @keyframes fade-out {
+    @keyframes blur-out {
         to {
+            filter: blur(10px);
             opacity: 0;
         }
     }
-
-    @keyframes fade-in {
+    @keyframes blur-in {
         from {
+            filter: blur(10px);
             opacity: 0;
         }
     }
