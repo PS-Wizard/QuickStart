@@ -3,7 +3,7 @@
     let { user } = $props<{ user: RecordModel | null }>();
 </script>
 
-<div class="navbar p-8">
+<div class="navbar bg-base-100">
     <div class="navbar-start">
         <a class="geist uppercase text-xl font-semibold" href="/dashboard"
             >Quick.Start</a
@@ -11,9 +11,8 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </div>
     <div class="navbar-end flex gap-2">
