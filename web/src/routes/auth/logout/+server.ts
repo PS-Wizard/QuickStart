@@ -1,4 +1,3 @@
-// src/routes/logout/+server.ts
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = ({ locals, cookies }) => {

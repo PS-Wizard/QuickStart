@@ -39,22 +39,23 @@
         navigation: auto;
     }
 
-
     ::view-transition-old(root) {
-        animation: blur-out 0.3s ease-out;
+        animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both blur-out;
     }
+
     ::view-transition-new(root) {
-        animation: blur-in 0.3s ease-out;
+        animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both blur-in;
     }
+
     @keyframes blur-out {
         to {
-            filter: blur(10px);
+            filter: blur(20px);
             opacity: 0;
         }
     }
     @keyframes blur-in {
         from {
-            filter: blur(10px);
+            filter: blur(20px);
             opacity: 0;
         }
     }

@@ -5,9 +5,9 @@
     let { data } = $props();
 
     async function handleLogout() {
-        await fetch("/logout", { method: "POST" });
-        await invalidateAll(); // Refresh all load functions
-        goto("/login"); // Smooth navigation with view transitions!
+        await fetch("/auth/logout", { method: "POST" });
+        await invalidateAll();
+        goto("/auth/login");
     }
 
     let items = $state([]);
@@ -25,7 +25,10 @@
     });
 </script>
 
-<div class="prose">
-    <h1 class="font-semibold w-fit">Welcome {data.user?.email}</h1>
+<h1 class="text-[16rem] clash morganite font-bold uppercase text-center">
+    Dashboard
+</h1>
+<div class="mx-auto flex justify-center items-center flex-col gap-8">
+    <h1 class="uppercase text-4xl">Welcome {data.user?.email}</h1>
     <button onclick={handleLogout} class="btn btn-primary">Logout</button>
 </div>

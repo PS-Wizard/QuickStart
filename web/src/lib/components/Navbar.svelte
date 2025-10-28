@@ -5,8 +5,9 @@
 
 <div class="navbar bg-base-100">
     <div class="navbar-start">
-        <a class="geist uppercase text-xl font-semibold" href="/dashboard"
-            >Quick.Start</a
+        <a
+            class="geist uppercase text-xl font-semibold"
+            href={user ? "/dashboard" : "/"}>Quick.Start</a
         >
     </div>
     <div class="navbar-center hidden lg:flex">
@@ -17,8 +18,8 @@
     </div>
     <div class="navbar-end flex gap-2">
         {#if !user}
-            <a class="btn btn-sm btn-ghost" href="/register">Sign Up</a>
-            <a class="btn btn-primary btn-sm" href="/login">Login</a>
+            <a class="btn btn-sm btn-ghost" href="/auth/register">Sign Up</a>
+            <a class="btn btn-primary btn-sm" href="/auth/login">Login &nearr;</a>
         {:else}
             <div class="avatar">
                 <div class="w-9 rounded-lg">

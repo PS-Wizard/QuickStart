@@ -6,7 +6,7 @@
 
     onMount(() => {
         if (!data.user) {
-            goto("/login");
+            goto("/auth/login");
         }
     });
 </script>
