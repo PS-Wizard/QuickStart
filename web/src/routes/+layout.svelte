@@ -30,7 +30,7 @@
 <nav style="view-transition-name: navbar;">
     <Navbar user={data.user} />
 </nav>
-<main>
+<main class="w-full min-h-screen">
     {@render children?.()}
 </main>
 

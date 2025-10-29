@@ -4,7 +4,7 @@
     let { form } = $props<{ form?: { error?: string } | null }>();
 </script>
 
-<h1>Login</h1>
+<h1 class="text-[8rem~16rem] morganite text-center font-bold uppercase">Login</h1>
 
 <form method="POST" use:enhance>
     {#if form?.error}

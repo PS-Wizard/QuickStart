@@ -12,8 +12,8 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/">Some Page</a></li>
+            <li><a href="/">Some Other Page</a></li>
         </ul>
     </div>
     <div class="navbar-end flex gap-2">
