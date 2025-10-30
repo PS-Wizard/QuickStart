@@ -32,3 +32,16 @@
     <h1 class="uppercase text-4xl">Welcome {data.user?.email}</h1>
     <button onclick={handleLogout} class="btn btn-primary">Logout</button>
 </div>
+
+<div class="container-12">
+    <div class="grid-12 gap-4 md:gap-6">
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <h1 class="heading text-6xl">Title</h1>
+            <p class="text">Some readable text here</p>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <h1 class="heading text-6xl">Title</h1>
+            <p class="text">Some readable text here</p>
+        </div>
+    </div>
+</div>

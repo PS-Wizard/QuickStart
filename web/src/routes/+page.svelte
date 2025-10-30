@@ -1,7 +1,11 @@
-<div class="mx-auto flex justify-center items-center flex-col h-[40vh] ">
-    <h1 class="uppercase morganite text-[8rem~16rem] font-bold leading-none">Welcome To Quick Start</h1>
-    <p class="text-center max-w-4xl">
-        A highly opinionated framework for building web apps quick & easy. This template covers tailwindcss, tailwindcss/typography, motionone, daisui, view transitions, sveltekit and pocketbase. 
-    </p>
+<div class="grid grid-cols-12 items-center justify-center h-[40vh] p-8">
+    <div class="col-span-12 text-center">
+        <h1 class="uppercase morganite text-[4rem~16rem] font-bold heading">
+            Welcome To Quick Start
+        </h1>
+        <p class="text mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, similique, dolorum sunt placeat laboriosam obcaecati libero magnam, id quibusdam odio natus praesentium deserunt voluptatum? Neque nam eos quam aliquid adipisci.
+        </p>
+    </div>
 </div>
-<img src="https://i.redd.it/wss1o9w707i11.jpg" alt="" />
+<img src="https://i.redd.it/wss1o9w707i11.jpg" class="col-span-12" alt="" />

@@ -6,7 +6,7 @@
 @plugin "daisyui/theme" {
     name: "black";
     default: false;
-    prefersdark: false;
+    prefersdark: true;
     color-scheme: "dark";
     --color-base-100: oklch(14.5% 0 0);
     --color-base-200: oklch(20.5% 0 0);
@@ -41,7 +41,7 @@
 @plugin "daisyui/theme" {
     name: "white";
     default: true;
-    prefersdark: true;
+    prefersdark: false;
     color-scheme: "light";
     --color-base-100: oklch(97% 0 0);
     --color-base-200: oklch(92.2% 0 0);
@@ -74,58 +74,52 @@
 }
 
 @font-face {
-    font-family: 'ClashDisplay';
-    src: url('/fonts/ClashDisplay.woff2') format('woff2');
-    font-weight: 200 700;
-    font-display: swap;
-    font-style: normal;
-}
-
-.clash {
-    font-family: 'ClashDisplay';
-}
-
-@font-face {
     font-family: 'Geist-Variable';
     src: url('/fonts/Geist.ttf') format('truetype');
     font-weight: 300 900;
     font-display: swap;
-    font-style: normal;
 }
-
-.geist{
-    font-family: 'Geist-Variable';
-}
-
-@layer base {
-    body {
-        font-family: 'Geist-Variable', sans-serif;
-    }
-}
-
 
 @font-face {
     font-family: 'Morganite';
     src: url('/fonts/Morganite-Light.ttf') format('truetype');
     font-weight: 300;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'Morganite';
     src: url('/fonts/Morganite-Book.ttf') format('truetype');
     font-weight: 400;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'Morganite';
     src: url('/fonts/Morganite-Bold.ttf') format('truetype');
     font-weight: 700;
-    font-style: normal;
 }
 
-.morganite {
-    font-family: 'Morganite';
+@layer base {
+    body {
+        font-family: 'Geist-Variable', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
 
+@layer utilities {
+    /* Typography - dead simple */
+    .heading {
+        line-height: 1;
+    }
+    
+    .text {
+        line-height: 1.5;
+        letter-spacing: -0.011em;
+        max-width: 65ch;
+    }
+    
+    /* Font families */
+    .clash { font-family: 'ClashDisplay'; }
+    .geist { font-family: 'Geist-Variable'; }
+    .morganite { font-family: 'Morganite'; }
 }
