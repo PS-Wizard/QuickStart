@@ -45,3 +45,10 @@
         </div>
     </div>
 </div>
+
+<img
+    src="https://i.redd.it/wss1o9w707i11.jpg"
+    class="col-span-4 sm:col-span-8 lg:col-span-12"
+    style="view-transition-name: hero-img;"
+    alt=""
+/>

@@ -119,7 +119,18 @@
     }
     
     /* Font families */
-    .clash { font-family: 'ClashDisplay'; }
     .geist { font-family: 'Geist-Variable'; }
     .morganite { font-family: 'Morganite'; }
 }
+
+@layer components {
+    .container-grid {
+        @apply max-w-screen-2xl mx-auto;
+    }
+    
+    .grid-12 {
+        @apply grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-2;
+    }
+}
+
+
