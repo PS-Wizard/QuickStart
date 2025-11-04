@@ -1,7 +1,5 @@
 <script lang="ts">
     import { goto, invalidateAll } from "$app/navigation";
-    import { animate, inView } from "motion";
-
     let { data } = $props();
 
     async function handleLogout() {
@@ -10,19 +8,6 @@
         goto("/auth/login");
     }
 
-    let items = $state([]);
-    $effect(() => {
-        items.forEach((item, i) => {
-            if (!item) return;
-            inView(item, () => {
-                animate(
-                    item,
-                    { opacity: [0, 1], x: [-100, 0] },
-                    { delay: i * 0.1 },
-                );
-            });
-        });
-    });
 </script>
 
 <h1 class="text-[16rem] clash morganite font-bold uppercase text-center">
