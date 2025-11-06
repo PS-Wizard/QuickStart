@@ -11,6 +11,7 @@
         document.documentElement.style.cursor = "progress";
         document.body.style.cursor = "progress";
     });
+
     onNavigate((navigation) => {
         if (!document.startViewTransition) return;
         return new Promise((resolve) => {
@@ -20,6 +21,7 @@
             });
         });
     });
+
     afterNavigate(() => {
         document.documentElement.style.cursor = "";
         document.body.style.cursor = "";

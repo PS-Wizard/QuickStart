@@ -1,7 +1,7 @@
 <div class="container-grid">
     <div class="grid-12 py-8">
         <div class="col-span-4 sm:col-span-8 lg:col-span-12 text-center">
-            <h1 class="uppercase morganite text-[4rem~16rem] font-bold heading">
+            <h1 class="uppercase morganite text-[4rem~16rem] font-bold heading" style="view-transition-name: heading">
                 Welcome To Quick Start
             </h1>
             <p class="text mx-auto">
@@ -16,7 +16,7 @@
         <img
             src="https://i.redd.it/wss1o9w707i11.jpg"
             class="col-span-4 sm:col-span-8 lg:col-span-12"
-            style="view-transition-name: hero-img;"
+            style="view-transition-name:hero-img"
             alt=""
         />
     </div>
